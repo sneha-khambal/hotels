@@ -1,2 +1,3 @@
 # node_modules will not be tracked by gitHub
 node_modules/ 
+.env

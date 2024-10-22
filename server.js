@@ -45,6 +45,9 @@ const db = require('./db')
 const bodyParser = require('body-parser')
 const personRouter = require('./routes/personRoutes')
 const menuRouter = require('./routes/menuItemRoutes')
+  require('dotenv').config();
+const port = process.env.PORT || 3000;
+
 app.use(bodyParser.json())
 
 app.get('/', function (req, res) {
@@ -54,4 +57,4 @@ app.get('/', function (req, res) {
 app.use('/person',personRouter)
 app.use('/menu',menuRouter)
 
-app.listen(3000,()=>{console.log('localhost running on 3000')})
+app.listen(port,()=>{console.log('localhost running on 3000')})
